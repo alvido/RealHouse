@@ -1,0 +1,83 @@
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    &__logo {
+        max-height: 35px;
+        transition: all .3s ease;
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    &__burger {
+        width: 18px;
+        height: 18px;
+        margin-left: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+
+        @include tablet {
+            display: flex;
+        }
+
+        & span {
+            width: 100%;
+            height: 2px;
+            background-color: $yellow;
+            transition: all .3s ease;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                background-color: $yellow;
+                transition: all .3s ease;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+        }
+
+        &.active {
+
+            & span {
+                width: 0;
+
+                &::before {
+                    rotate: 45deg;
+                    top: 10px;
+                }
+
+                &::after {
+                    rotate: -45deg;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}

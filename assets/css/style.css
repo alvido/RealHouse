@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+}
+
+@font-face {
+  font-family: "TrajanPro";
+  src: url("../fonts/TrajanPro-Regular.woff"), url("../fonts/TrajanPro-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TrajanPro";
+  src: url("../fonts/TrajanPro-Bold.woff"), url("../fonts/TrajanPro-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTNorms";
+  src: url("../fonts/TTNorms-Regular.woff"), url("../fonts/TTNorms-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTNorms";
+  src: url("../fonts/TTNorms-Bold.woff"), url("../fonts/TTNorms-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "TrajanPro", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  background-color: #0F0E13;
+  color: #FFF;
+}
+body.lock {
+  height: 800px;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media (max-width: 560px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.navigation {
+  margin-left: 54px;
+}
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.navigation__item {
+  padding: 20px 10px;
+  position: relative;
+}
+.navigation__item.active::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F8CC58), to(#0F0E13));
+  background: linear-gradient(to bottom, #F8CC58, #0F0E13);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  opacity: 0.2;
+}
+.navigation__item.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #F8CC58;
+  position: absolute;
+  bottom: calc(100% + 38px);
+  left: 0;
+}
+.navigation__link {
+  color: #FFF;
+  font-family: "TTNorms";
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.navigation__link:hover {
+  color: #F8CC58;
+}
+
+.call {
+  margin-left: auto;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
+}
+.header__logo {
+  max-height: 35px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__logo:hover {
+  scale: 1.05;
+}
+.header__burger {
+  width: 18px;
+  height: 18px;
+  margin-left: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .header__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.header__burger span {
+  width: 100%;
+  height: 2px;
+  background-color: #F8CC58;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__burger span::before, .header__burger span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  background-color: #F8CC58;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__burger span::before {
+  top: 0;
+}
+.header__burger span::after {
+  bottom: 0;
+}
+.header__burger.active span {
+  width: 0;
+}
+.header__burger.active span::before {
+  rotate: 45deg;
+  top: 10px;
+}
+.header__burger.active span::after {
+  rotate: -45deg;
+  bottom: 10px;
+}
+
+.hero {
+  background: url(../images/hero/hero-bg2.png) no-repeat center;
+  background-size: cover;
+  min-height: 1150px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 235px;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  width: 400px;
+  height: 100%;
+  background: url(../images/hero/tree.png) no-repeat;
+  -webkit-box-shadow: 0px 4px 250px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 250px 0px rgba(0, 0, 0, 0.2);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+.hero__wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hero img {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0% -50%;
+}
+.hero__scroll {
+  width: 31px;
+  height: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+}
+.hero__scroll path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hero__scroll:hover path {
+  fill-opacity: 1;
+}/*# sourceMappingURL=style.css.map */

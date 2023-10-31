@@ -1,0 +1,83 @@
+body {
+    font-family: 'TrajanPro', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    background-color: $dark;
+    color: $white;
+
+    &.lock {
+        height: 800px;
+        overflow: hidden;
+    }
+
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1150px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include mobile {
+        padding: 0 15px;
+    }
+}
+
+.navigation {
+    margin-left: 54px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__item {
+        padding: 20px 10px;
+        position: relative;
+
+        &.active::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to bottom, $yellow, $dark);
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            opacity: .2;
+        }
+
+        &.active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $yellow;
+            position: absolute;
+            bottom: calc(100% + 38px);
+            left: 0;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-family: 'TTNorms';
+        font-size: 14px;
+        transition: all .3s ease;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.call {
+    margin-left: auto;
+}
