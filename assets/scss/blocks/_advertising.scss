@@ -1,0 +1,57 @@
+.advertising {
+    padding-top: 130px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__container {
+        max-width: 560px;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    & .section__title {
+
+        &::after {
+            bottom:  -22px;
+        }
+    }
+
+    &__content {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        padding: 37px 45px;
+        border-radius: 10px;
+        border: 2px dashed rgba(255, 255, 255, 0.10);
+    }
+
+    &__desc {
+
+        max-width: 355px;
+
+        & h3 {
+            color: $yellow;
+            font-feature-settings: 'liga' off;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        & p {
+            margin-top: 12px;
+            color: rgba(255, 255, 255, 0.60);
+            font-feature-settings: 'liga' off;
+            font-family: 'TTNorms';
+            font-size: 18px;
+        }
+    }
+}

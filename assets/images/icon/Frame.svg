@@ -1,19 +1,15 @@
-<svg width="118" height="114" viewBox="0 0 118 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Frame" clip-path="url(#clip0_343_184)" filter="url(#filter0_d_343_184)">
-<path id="Vector" d="M68 48.0001C68 46.8955 67.1045 46 65.9999 46.0001L51.9999 46.0006C50.8954 46.0006 50 46.8961 50 48.0006L50.0001 58C50.0001 59.1046 50.8955 60 52.0001 60H66C67.1046 60 68 59.1046 68 58L68 48.0001ZM56.4644 53.0005L51.3846 57.708V48.293L56.4644 53.0005ZM57.4856 53.9542L58.5327 54.9167C58.6603 55.0348 58.827 55.1003 59 55.1003C59.173 55.1003 59.3397 55.0348 59.4673 54.9167L60.5144 53.9542L65.525 58.6005H52.475L57.4856 53.9542ZM61.5356 53.0005L66.6154 48.293V57.708L61.5356 53.0005Z" fill="#F8CC58"/>
-</g>
-<defs>
-<filter id="filter0_d_343_184" x="-1" y="-2" width="120" height="118" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="25"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.972549 0 0 0 0 0.8 0 0 0 0 0.345098 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_343_184"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_343_184" result="shape"/>
-</filter>
-<clipPath id="clip0_343_184">
-<rect width="20" height="18" fill="white" transform="translate(49 44)"/>
-</clipPath>
-</defs>
+<?xml version="1.0"?>
+<svg width="180" height="140" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="clip0_343_184">
+   <rect fill="white" height="18" id="svg_1" transform="translate(49 44)" width="20"/>
+  </clipPath>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m46.82,-1666613.07c0,-3.25 -2.34,-6 -5.2,-6l-36.41,0c-2.86,0 -5.2,2.75 -5.2,6l0,30.25c0,3.25 2.34,6 5.2,6l36.41,0c2.86,0 5.2,-2.75 5.2,-6l0,-30.25zm-30.01,15.25l-13.21,14.25l0,-28.5l13.21,14.25zm2.68,2.75l2.7,3c0.34,0.25 0.78,0.5 1.22,0.5c0.44,0 0.88,-0.25 1.22,-0.5l2.7,-3l13.06,14l-33.94,0l13.03,-14zm10.53,-2.75l13.21,-14.25l0,28.5l-13.21,-14.25z" fill="#F8CC58" id="Vector"/>
+  <path d="m180,9.9c0,-10.99 -8.95,-9.99 -19.96,-9.99l-140.04,0c-11,0 -20.01,8.99 -20.01,19.98l0,99.9c0,10.99 9,19.98 20.01,19.98l140.04,0c11,0 20.01,-8.99 20.01,-19.98l-0.05,-109.89zm-115.38,59.94l-50.81,47.05l0,-94.11l50.81,47.05zm10.3,9.49l10.4,9.69c1.3,1.1 3,1.8 4.7,1.8c1.7,0 3.4,-0.7 4.7,-1.8l10.4,-9.69l50.21,46.45l-130.54,0l50.11,-46.45zm40.51,-9.49l50.81,-47.05l0,94.11l-50.81,-47.05z" fill="#F8CC58" id="svg_2" stroke-width="0"/>
+  <image height="0" id="svg_7" width="0.12" x="-23.47" xlink:href="./images/logo.svg" y="45.85"/>
+  <image height="0" id="svg_3" width="0" x="-25.33" xlink:href="./images/logo.svg" y="47.6"/>
+ </g>
 </svg>

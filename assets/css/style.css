@@ -465,7 +465,7 @@ body.lock {
 }
 
 .services {
-  margin-top: 62px;
+  padding-top: 62px;
 }
 .services .section__title {
   text-align: center;
@@ -522,4 +522,266 @@ body.lock {
 
 .faq {
   margin-top: 130px;
+}
+
+.advertising {
+  padding-top: 130px;
+}
+.advertising__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.advertising__container {
+  max-width: 560px;
+}
+.advertising__img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+}
+.advertising .section__title::after {
+  bottom: -22px;
+}
+.advertising__content {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 38px;
+  padding: 37px 45px;
+  border-radius: 10px;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+}
+.advertising__desc {
+  max-width: 355px;
+}
+.advertising__desc h3 {
+  color: #F8CC58;
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-size: 24px;
+  font-weight: 700;
+}
+.advertising__desc p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  font-size: 18px;
+}
+
+.purpose {
+  padding-top: 130px;
+}
+.purpose .section__title {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.purpose .section__title::after {
+  bottom: -22px;
+  left: 50%;
+  translate: 0 -50%;
+}
+.purpose__content {
+  padding: 25px 20px 35px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.purpose__content::after {
+  content: "";
+  display: block;
+  background: url(../images/texturefabrik.png) no-repeat center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: contrast(0.5);
+          filter: contrast(0.5);
+}
+.purpose__content h3 {
+  color: #F8CC58;
+  text-align: center;
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-size: 24px;
+  font-weight: 700;
+}
+.purpose__content p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  max-width: 1000px;
+  margin: 17px auto 0;
+}
+.purpose__content .decor {
+  position: absolute;
+}
+.purpose__content .decor1 {
+  top: 20px;
+  left: 20px;
+}
+.purpose__content .decor2 {
+  top: 20px;
+  right: 20px;
+  rotate: 90deg;
+}
+.purpose__content .decor3 {
+  bottom: 20px;
+  left: 20px;
+  rotate: -90deg;
+}
+.purpose__content .decor4 {
+  bottom: 20px;
+  right: 20px;
+  rotate: 180deg;
+}
+
+.success {
+  padding-top: 130px;
+}
+.success .section__title {
+  text-align: center;
+  margin-bottom: 102px;
+}
+.success .section__title::after {
+  bottom: -32px;
+  left: 50%;
+  translate: 0 -50%;
+}
+.success__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.success__item {
+  position: relative;
+  max-width: 255px;
+  min-height: 255px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.success__item:hover::after {
+  background: rgba(9, 10, 18, 0.6);
+  -webkit-backdrop-filter: blur(13.5px);
+          backdrop-filter: blur(13.5px);
+}
+.success__item:hover .price {
+  text-align: center;
+}
+.success__item:hover .more {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+.success__item:hover h5, .success__item:hover p {
+  opacity: 0;
+  visibility: hidden;
+}
+.success__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.success__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.success__desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 27px 20px 16px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 1;
+}
+.success__desc .price {
+  margin-bottom: 20px;
+  width: 100%;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.success__desc h5 {
+  margin-top: 80px;
+  color: #FFF;
+  font-family: "TTNorms";
+  font-weight: 700;
+}
+.success__desc p {
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  font-size: 14px;
+}
+.success .more {
+  max-width: 93px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FFF;
+  font-family: "TTNorms";
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  margin: 0px auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.success .more img {
+  margin-bottom: 11px;
 }/*# sourceMappingURL=style.css.map */
