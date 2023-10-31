@@ -48,21 +48,30 @@ $("[data-scroll]").on("click", function (event) {
     blockId = $(this).data('scroll'),
     blockOffset = $(blockId).offset().top;
 
-  $("body").removeClass("lock");
-  $(".navigation ").removeClass("active");
-  $(".header__burger ").removeClass("active");
+  // Добавление класса "active" для родителя текущего элемента
+  $this.closest('.navigation__item').addClass('active');
 
+  // Удаление класса "active" у остальных родительских элементов
+  $this.closest('.navigation__item').siblings().removeClass('active');
+
+  // Удаление классов "lock" и "active" у соответствующих элементов
+  $("body").removeClass("lock");
+  $(".navigation").removeClass("active");
+  $(".header__burger").removeClass("active");
+
+  // Анимация прокрутки к элементу
   $("html, body").animate({
     scrollTop: blockOffset
   }, 500);
 });
 //
 
+
 // Fixed header
 
 $(document).ready(function () {
   var header = $(".header"),
-  headerH = header.innerHeight(),
+    headerH = header.innerHeight(),
     scrollOffset = $(window).scrollTop();
 
   checkScroll(scrollOffset)
@@ -78,11 +87,29 @@ $(document).ready(function () {
   function checkScroll(scrollOffset) {
 
     if (scrollOffset >= headerH) {
-      //header.addClass("fixed");
+      header.addClass("fixed");
     } else {
-      //header.removeClass("fixed");
+      header.removeClass("fixed");
     }
+  }
+});
+//
 
+// Scroll to About on Home
+document.addEventListener("DOMContentLoaded", function () {
+  // Найти элемент с id "about"
+  const aboutSection = document.getElementById("about");
+
+  // Проверить, существует ли элемент с id "about"
+  if (aboutSection) {
+    // Обработка клика по ссылке
+    const link = document.querySelector(".hero__scroll");
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Отменить стандартное действие ссылки
+
+      // Прокрутить страницу к элементу "about" с использованием smooth scrolling
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    });
   }
 });
 //

@@ -1,24 +1,9 @@
 .hero {
     background: url(../images/hero/hero-bg2.png) no-repeat center;
     background-size: cover;
-    min-height: 1150px;
     position: relative;
     overflow: hidden;
-    padding-top: 235px;
-
-    // &::before {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     left: 50%;
-    //     bottom: 0;
-    //     width: 940px;
-    //     height: 940px;
-    //     border-radius: 940px;
-    //     background: linear-gradient(171deg, #F8CC58 -6.87%, rgba(248, 204, 88, 0.00) 57.62%);
-    //     filter: blur(200px);
-    //     z-index: -1;
-    // }
+    padding: 235px 0 198px;
 
     &::after {
         content: '';
@@ -36,14 +21,70 @@
     &__wrapper {
         position: relative;
         z-index: 1;
+        max-width: 600px;
     }
 
-    & img {
+    &__title {
+        font-size: 48px;
+
+        & span {
+            color: $yellow;
+        }
+    }
+
+    &__text {
+        font-family: 'TTNorms';
+        margin-top: 35px;
+        margin-left: 95px;
+        max-width: 480px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: $yellow;
+            position: absolute;
+            right: calc(100% + 25px);
+            top: 50%;
+            translate: 0 -50%;
+        }
+    }
+
+    &__list {
+        padding: 100px 0 88px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 84px 38px;
+    }
+
+    &__item {
+        max-width: 225px;
+
+        & span {
+            color: $yellow;
+            text-shadow: 0px 4px 110px rgba(248, 204, 88, 0.50);
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        & p {
+            margin-top: 8px;
+            color: rgba(255, 255, 255, 0.60);
+            font-feature-settings: 'liga' off;
+            font-family: 'TTNorms';
+            max-width: 150px;
+        }
+    }
+
+    &__img {
         width: 60%;
         position: absolute;
-        top: 50%;
+        bottom: 0%;
         right: 0;
-        translate: -0% -50%;
+        translate: -0% -0%;
     }
 
     &__scroll {

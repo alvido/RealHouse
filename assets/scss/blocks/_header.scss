@@ -3,7 +3,28 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+
+    &.fixed {
+        position: fixed;
+        background-color: $dark;
+
+        & .header__wrapper {
+            padding: 20px 0;
+        }
+
+        & .navigation__item {
+            padding: 10px;
+
+            &.active::before {
+                height: 20px;
+            }
+
+            &.active::after {
+                bottom: calc(100% + 18px);
+            }
+        }
+    }
 
     &__wrapper {
         display: flex;
@@ -70,12 +91,12 @@
 
                 &::before {
                     rotate: 45deg;
-                    top: 10px;
+                    top: 8px;
                 }
 
                 &::after {
                     rotate: -45deg;
-                    bottom: 10px;
+                    bottom: 8px;
                 }
             }
         }
