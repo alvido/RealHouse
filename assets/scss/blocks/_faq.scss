@@ -1,3 +1,32 @@
 .faq {
-    margin-top: 130px;
+    padding-top: 130px;
+
+    & .section__title {
+        text-align: center;
+        margin-bottom: 102px;
+
+        &::after {
+            left: 50%;
+            bottom: -32px;
+            translate: -50% 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        counter-reset: item;
+        padding: 0;
+        column-count: 2;
+        column-fill: auto;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 1em;
+
+        &::before {
+            counter-increment: item;
+            content: counter(item) ". ";
+        }
+    }
 }

@@ -521,7 +521,35 @@ body.lock {
 }
 
 .faq {
-  margin-top: 130px;
+  padding-top: 130px;
+}
+.faq .section__title {
+  text-align: center;
+  margin-bottom: 102px;
+}
+.faq .section__title::after {
+  left: 50%;
+  bottom: -32px;
+  translate: -50% 0;
+}
+.faq__list {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
+}
+.faq__item {
+  display: block;
+  margin-bottom: 1em;
+}
+.faq__item::before {
+  counter-increment: item;
+  content: counter(item) ". ";
 }
 
 .advertising {
@@ -894,9 +922,12 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .reviews__content {
   max-width: 330px;
@@ -906,10 +937,188 @@ body.lock {
           font-feature-settings: "liga" off;
   font-family: "TTNorms";
   font-size: 18px;
+  margin-bottom: 20px;
+}
+.reviews__content p:last-child {
+  margin: 0;
 }
 .reviews .section__title {
   margin-bottom: 52px;
 }
 .reviews .section__title::after {
   bottom: -22px;
+}
+.reviews .arrows__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 11px;
+}
+.reviews .arrows__slider .slick-arrow {
+  width: 60px;
+  height: 49px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 6px;
+  background: linear-gradient(224deg, rgba(255, 255, 255, 0.1) -71.23%, rgba(255, 255, 255, 0) 94.99%), #201E28;
+  border: 1px solid #444;
+  border-bottom: none;
+  -webkit-filter: drop-shadow(0px 3px 3.1121942997px rgba(0, 0, 0, 0.1)) drop-shadow(0px 7px 6.9220323563px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0px 3px 3.1121942997px rgba(0, 0, 0, 0.1)) drop-shadow(0px 7px 6.9220323563px rgba(0, 0, 0, 0.12));
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.reviews .arrows__slider .slick-arrow svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.reviews .arrows__slider .slick-arrow:hover {
+  background: linear-gradient(235deg, rgba(0, 0, 0, 0.1) 5.85%, rgba(0, 0, 0, 0) 99.33%), #F8CC58;
+  border: 1px solid #F8CC58;
+  border-bottom: none;
+}
+.reviews .arrows__slider .slick-arrow:hover svg path {
+  stroke: #0F0E13;
+}
+.reviews .arrows__slider .slick-prev svg path {
+  stroke: #FFF;
+}
+.reviews .arrows__slider .slick-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.reviews .arrows__slider .slick-disabled:hover {
+  background: linear-gradient(224deg, rgba(255, 255, 255, 0.1) -71.23%, rgba(255, 255, 255, 0) 94.99%), #201E28;
+  border: 1px solid #444;
+  border-bottom: none;
+}
+.reviews .arrows__slider .slick-disabled:hover svg path {
+  stroke: #FFF;
+}
+.reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 655px;
+}
+.reviews__item {
+  width: 310px;
+  min-height: 419px;
+  margin-right: 35px;
+  padding: 30px 30px 87px;
+  background: linear-gradient(224deg, rgba(255, 255, 255, 0.1) -25.17%, rgba(255, 255, 255, 0) 100%), rgba(32, 30, 40, 0.6);
+  -webkit-box-shadow: 0px 3px 3.11219px 0px rgba(0, 0, 0, 0.1), 0px 7px 6.92203px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 3.11219px 0px rgba(0, 0, 0, 0.1), 0px 7px 6.92203px 0px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.reviews__item p {
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  margin-top: 20px;
+  opacity: 0.6;
+}
+.reviews__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews__author img {
+  width: 70px;
+  height: 70px;
+}
+.reviews__info {
+  margin-left: 15px;
+}
+.reviews__info h5 {
+  font-family: "TTNorms";
+  font-size: 20px;
+  font-weight: 700;
+}
+.reviews__info span {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "TTNorms";
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.reasons {
+  padding-top: 130px;
+  position: relative;
+}
+.reasons::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2800px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../images/reasons-bg.png) no-repeat top;
+  background-size: cover;
+  background-position: 0 -200px;
+  mix-blend-mode: multiply;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+.reasons .section__title {
+  text-align: center;
+  margin-bottom: 102px;
+}
+.reasons .section__title::after {
+  left: 50%;
+  bottom: -32px;
+  translate: -50% 0;
+}
+.reasons__list {
+  counter-reset: item;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 79px;
+}
+.reasons__item {
+  padding-top: 46px;
+  position: relative;
+}
+.reasons__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero);
+  text-shadow: 0px 4px 110px rgba(255, 255, 255, 0.3);
+  font-size: 64px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(75.32%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0) 75.32%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.reasons__item img {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+          filter: drop-shadow(2px 4px 6px black);
+}
+.reasons__item h4 {
+  margin: 23px 0 15px;
+  color: #F66350;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.reasons__item p {
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
 }/*# sourceMappingURL=style.css.map */
