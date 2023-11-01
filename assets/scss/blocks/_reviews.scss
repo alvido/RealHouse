@@ -1,0 +1,26 @@
+.reviews {
+    padding-top: 130px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 330px;
+
+        & p {
+            font-feature-settings: 'liga' off;
+            font-family: 'TTNorms';
+            font-size: 18px;
+        }
+    }
+
+    & .section__title {
+        margin-bottom: 52px;
+
+        &::after {
+            bottom: -22px;
+        }
+    }
+}

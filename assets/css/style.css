@@ -652,6 +652,23 @@ body.lock {
 
 .success {
   padding-top: 130px;
+  position: relative;
+}
+.success::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2800px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../images/success-bg.png) no-repeat top;
+  background-size: cover;
+  background-position: 0 -200px;
+  mix-blend-mode: multiply;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 .success .section__title {
   text-align: center;
@@ -665,13 +682,13 @@ body.lock {
 .success__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
 }
 .success__item {
   position: relative;
   max-width: 255px;
   min-height: 255px;
   position: relative;
-  overflow: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -680,6 +697,9 @@ body.lock {
   -webkit-backdrop-filter: blur(13.5px);
           backdrop-filter: blur(13.5px);
 }
+.success__item:hover .success__desc {
+  padding: 40px 20px;
+}
 .success__item:hover .price {
   text-align: center;
 }
@@ -687,10 +707,13 @@ body.lock {
   visibility: visible;
   opacity: 1;
   height: auto;
+  overflow: visible;
 }
 .success__item:hover h5, .success__item:hover p {
   opacity: 0;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 .success__item::after {
   content: "";
@@ -702,6 +725,12 @@ body.lock {
   height: 100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.success__item .sold {
+  position: absolute;
+  top: -46px;
+  right: -49px;
+  z-index: 1;
 }
 .success__img {
   width: 100%;
@@ -729,6 +758,8 @@ body.lock {
       -ms-flex-align: start;
           align-items: flex-start;
   z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .success__desc .price {
   margin-bottom: 20px;
@@ -756,9 +787,8 @@ body.lock {
 }
 .success .more {
   max-width: 93px;
-  visibility: hidden;
-  opacity: 0;
   height: 0;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -778,10 +808,108 @@ body.lock {
   font-weight: 700;
   background-color: transparent;
   margin: 0px auto;
+  text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .success .more img {
   margin-bottom: 11px;
+}
+.success .more:hover {
+  scale: 1.1;
+}
+
+.process {
+  padding-top: 130px;
+}
+.process .section__title {
+  text-align: center;
+  margin-bottom: 82px;
+}
+.process .section__title::after {
+  bottom: -32px;
+  left: 50%;
+  translate: 0 -50%;
+}
+.process__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 115px 30px;
+}
+.process__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+.process__item::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 16px;
+  background: url(/assets/images/icon/Line2.svg) no-repeat center;
+  position: absolute;
+  top: 40px;
+  right: -25px;
+}
+.process__item:last-child::after {
+  display: none;
+}
+.process__item:nth-child(3):after {
+  top: calc(100% + 45px);
+  right: 50%;
+  translate: -50% 0;
+  rotate: 90deg;
+}
+.process__item:nth-child(4):after, .process__item:nth-child(5):after {
+  rotate: 180deg;
+}
+.process__item img {
+  max-width: 80px;
+}
+.process__item p {
+  margin-top: 20px;
+  text-align: center;
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.reviews {
+  padding-top: 130px;
+}
+.reviews__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews__content {
+  max-width: 330px;
+}
+.reviews__content p {
+  -webkit-font-feature-settings: "liga" off;
+          font-feature-settings: "liga" off;
+  font-family: "TTNorms";
+  font-size: 18px;
+}
+.reviews .section__title {
+  margin-bottom: 52px;
+}
+.reviews .section__title::after {
+  bottom: -22px;
 }/*# sourceMappingURL=style.css.map */
