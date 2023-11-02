@@ -25,22 +25,61 @@ body {
     margin: 0 auto;
 
     @include mobile {
-        padding: 0 15px;
+        padding: 0 35px;
     }
 }
 
 .navigation {
     margin-left: 54px;
 
+    &.active {
+
+        @include laptop {
+            padding: 25px 32px;
+            opacity: 1;
+            width: 360px;
+            z-index: 2;
+            background: url(/assets/images/hero/hero-bg2.png) no-repeat center, $dark;
+        }
+    }
+
+    @include desktop {
+        margin-left: 30px;
+    }
+
+    @include laptop {
+        margin-left: 0px;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        padding: 25px 0px;
+        width: 0px;
+        height: 100vh;
+        min-height: 800px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
     &__list {
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include laptop {
+            flex-direction: column;
+            margin: 100px 0 0 0;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         padding: 20px 10px;
         position: relative;
+
+        @include laptop {
+            padding: 0;
+        }
 
         &.active::before {
             content: '';
@@ -52,6 +91,10 @@ body {
             bottom: 100%;
             left: 0;
             opacity: .2;
+
+            @include laptop {
+                display: none;
+            }
         }
 
         &.active::after {
@@ -63,6 +106,10 @@ body {
             position: absolute;
             bottom: calc(100% + 38px);
             left: 0;
+
+            @include laptop {
+                bottom: 0;
+            }
         }
     }
 
@@ -87,8 +134,25 @@ body {
     font-weight: 700;
     transition: all .3s ease;
 
+    @include desktop {
+        font-size: 18px;
+    }
+
+    @include laptop {
+        z-index: 2;
+    }
+
+    @include mobile {
+        font-size: 16px;
+    }
+
+    @include phone {
+        font-size: 10px;
+    }
+
     &:hover {
         color: $yellow;
+        filter: drop-shadow(0px 4px 50px #F8CC58);
     }
 
     & svg {
@@ -103,15 +167,29 @@ body {
     position: relative;
 
     &::after {
-    content: '';
-    display: block;
-    width: 70px;
-    height: 2px;
-    background-color: $yellow;
-    position: absolute;
+        content: '';
+        display: block;
+        width: 70px;
+        height: 2px;
+        background-color: $yellow;
+        position: absolute;
     }
 
     & span {
         color: $yellow;
     }
+}
+
+
+.about,
+.services,
+.advertising,
+.purpose,
+.success,
+.process,
+.reviews,
+.reasons,
+.faq,
+.footer {
+    display: none;
 }
