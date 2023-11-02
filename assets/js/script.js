@@ -32,9 +32,9 @@ $(document).ready(function () {
 function faqCollapse() {
   var $this = $(this);
   $this.toggleClass("active");
-  $('.faq__title').not($this).removeClass("active");
+  // $('.faq__title').not($this).removeClass("active");
   var $faqText = $this.next('.faq__text');
-  $('.faq__text').not($faqText).slideUp(500);
+  // $('.faq__text').not($faqText).slideUp(500);
   $faqText.slideToggle(500);
 }
 //faq collapse
