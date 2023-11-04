@@ -166,6 +166,10 @@ body {
     font-size: 40px;
     position: relative;
 
+    @include phone {
+        font-size: 20px;
+    }
+
     &::after {
         content: '';
         display: block;
@@ -173,6 +177,10 @@ body {
         height: 2px;
         background-color: $yellow;
         position: absolute;
+
+        @include phone {
+            width: 30px;
+        }
     }
 
     & span {
@@ -181,9 +189,6 @@ body {
 }
 
 
-.about,
-.services,
-.advertising,
 .purpose,
 .success,
 .process,

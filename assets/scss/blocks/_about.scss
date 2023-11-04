@@ -2,6 +2,10 @@
     position: relative;
     top: -68px;
 
+    @include mobile {
+        top: 0;
+    }
+
     &::before {
         content: '';
         display: block;
@@ -24,14 +28,43 @@
         align-items: center;
         justify-content: space-between;
         gap: 95px;
+
+        @include laptop {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+
+        @include mobile {
+
+            & img {
+                width: 100%;
+            }
+        }
     }
 
     & .section__title {
         margin-bottom: 72px;
 
+        @include laptop {
+            text-align: center;
+        }
+
+        @include phone {
+            margin-bottom: 40px;
+        }  
+
         &::after {
             left: 0;
             bottom: -42px;
+
+            @include laptop {
+                left: 50%;
+                translate: -50% 0;
+            }
+
+            @include phone {
+                bottom: -20px;
+            }
         }
     }
 
@@ -41,6 +74,15 @@
         color: #FFF;
         font-feature-settings: 'liga' off;
         font-size: 18px;
+
+        @include laptop {
+            text-align: center;
+        }
+
+        @include phone {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
 
         &:last-child {
             margin: 0;

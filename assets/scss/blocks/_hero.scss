@@ -9,6 +9,10 @@
         padding: 150px 0;
     }
 
+    @include mobile {
+        padding: 80px 0 0;
+    }
+
     &::after {
         content: '';
         display: block;
@@ -183,7 +187,7 @@
         }
 
         @include mobile {
-            bottom: 20%;
+            bottom: 5%;
         }
 
         & path {

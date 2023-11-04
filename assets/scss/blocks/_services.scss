@@ -1,6 +1,10 @@
 .services {
     padding-top: 62px;
 
+    @include mobile {
+        padding: 50px 0 0 0;
+    }
+
     .section__title {
         text-align: center;
 
@@ -8,6 +12,10 @@
             left: 50%;
             translate: -50% 0;
             bottom: -30px;
+
+            @include phone {
+                bottom: -20px;
+            } 
         }
     }
 
@@ -16,12 +24,33 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px 30px;
+
+        @include ipad {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-gap: 30px 10px;
+        }
+
+        @include phone {
+            margin-top: 50px;
+        }
     }
 
     &__item {
         padding: 34px 30px;
         position: relative;
         background: linear-gradient(224deg, rgba(255, 255, 255, 0.10) -25.17%, rgba(255, 255, 255, 0.00) 100%), rgba(32, 30, 40, 0.60);
+
+        @include mobile {
+            padding: 20px;
+            min-height: 120px;
+        }
+
+        @include phone {
+            padding: 30px 12px 10px;
+        }
 
         & span {
             width: 52px;
@@ -35,6 +64,17 @@
             translate: -50% 0;
             background-color: $yellow;
             border-radius: 50%;
+
+            @include mobile {
+                width: 35px;
+                height: 35px;
+                top: -18px;
+
+                & img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
         }
 
         & h4 {
@@ -43,12 +83,28 @@
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 8px;
+
+            @include mobile {
+                font-size: 3.3vw;
+            }
+
+            @include phone {
+                font-size: 12px;
+            }
         }
 
         & p {
             color: rgba(255, 255, 255, 0.60);
             font-feature-settings: 'liga' off;
             font-family: 'TTNorms';
+
+            @include mobile {
+                font-size: 3vw;
+            }
+
+            @include phone {
+                font-size: 10px;
+            }
         }
     }
 }
