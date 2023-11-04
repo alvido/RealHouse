@@ -5,27 +5,62 @@
         display: flex;
         align-items: center;
         position: relative;
-    }
 
-    &__container {
-        max-width: 560px;
+        @include desktop {
+            flex-direction: column-reverse;
+        }
     }
 
     &__img {
         position: absolute;
         right: 0;
-        top: 50%;
-        translate: 0 -50%;
+        bottom: 0%;
+        
+        @include desktop {
+            position: relative;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 206px;
+            height: 37px;
+            background: url(../images/adwa-decor.svg) no-repeat center;
+            position: absolute;
+            top: 20px;
+            left: -50px;
+
+            @include desktop {
+                width: 46px;
+                height: 71px;
+                background: url(../images/adwa-decor2.svg) no-repeat center;
+                top: 0;
+                left: 100%;
+            }
+        }
     }
 
     & .section__title {
 
+        max-width: 560px;
+
+        @include desktop {
+            margin: 0 auto;
+            text-align: center;
+        }
+
         &::after {
-            bottom:  -22px;
+            bottom: -22px;
+
+            @include desktop {
+                left: 50%;
+                translate: -50% 0;
+            }
         }
     }
 
     &__content {
+        max-width: 560px;
         margin-top: 80px;
         display: flex;
         align-items: center;
@@ -33,6 +68,10 @@
         padding: 37px 45px;
         border-radius: 10px;
         border: 2px dashed rgba(255, 255, 255, 0.10);
+
+        @include desktop {
+            margin-top: 0px;
+        }
     }
 
     &__desc {
