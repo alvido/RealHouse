@@ -2,6 +2,10 @@
     padding-top: 103px;
     position: relative;
 
+    @include mobile {
+        padding-top: 50px;
+    }
+
     &::before {
         content: '';
         display: block;
@@ -22,7 +26,7 @@
         display: flex;
         align-items: flex-start;
 
-        @include tablet {
+        @include ipad {
             flex-direction: column;
         }
     }
@@ -34,14 +38,6 @@
         @include laptop {
             margin-right: 60px;
         }
-
-        @include phone {
-            margin-right: 0;
-
-            .footer__text {
-                display: none;
-            }
-        }
     }
 
     &__logo {
@@ -50,16 +46,20 @@
         margin-bottom: 24px;
         transition: all .3s ease;
 
+        @include phone {
+            margin-bottom: 0;
+        }
+
         &:hover {
             scale: 1.1;
         }
 
         & img {
             max-height: 36px;
-        }
 
-        @include phone {
-            margin-bottom: 0;
+            @include mobile {
+                max-height: 21px;
+            }
         }
     }
 
@@ -68,18 +68,31 @@
         font-feature-settings: 'liga' off;
         font-family: 'TTNorms';
         font-size: 12px;
+
+        @include mobile {
+            font-size: 10px;
+            max-width: 140px;
+        }
     }
 
     &__nav {
 
-        @include phone {
-            margin-right: 0px;
+        @include ipad {
+            margin-top: 16px;
+        }
+
+        @include mobile {
+            width: 100%;
         }
 
         &--title {
             color: $yellow;
             font-size: 20px;
             font-weight: 700;
+
+            @include phone {
+                font-size: 14px;
+            }
         }
     }
 
@@ -94,11 +107,8 @@
         }
 
         @include mobile {
-            grid-gap: 30px;
-        }
-
-        @include phone {
-            grid-template-columns: repeat(1, 1fr);
+            margin-top: 15px;
+            grid-gap: 10px;
         }
     }
 
@@ -119,11 +129,38 @@
 
     &__contact {
         margin-left: auto;
+
+        @include ipad {
+            position: absolute;
+            right: 20px;
+        }
     }
 
     & .mail {
         margin: 24px 0 0 0;
         font-size: 14px;
+
+        @include phone {
+            margin-top: 10px;
+        }
+    }
+
+    & .call {
+
+        @include mobile {
+            font-size: 14px;
+        }
+
+        @include phone {
+            font-size: 10px;
+        }
+
+        & svg {
+            @include phone {
+                width: 12px;
+                margin-right: 5px;
+            }
+        }
     }
 
     .copy {
@@ -131,15 +168,23 @@
         border-top: 1px solid rgba(255, 255, 255, 0.05);
         margin-top: 92px;
 
+        @include phone {
+            padding: 20px 0;
+        }
+
         &__text {
             color: rgba(255, 255, 255, 0.40);
             text-align: center;
             font-family: 'TTNorms';
             font-size: 13px;
+
+            @include phone {
+                font-size: 10px;
+            }
         }
 
         @include mobile {
-            margin-top: 40px;
+            margin-top: 15px;
         }
     }
 }

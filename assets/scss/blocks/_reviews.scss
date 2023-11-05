@@ -1,5 +1,44 @@
 .reviews {
     padding-top: 130px;
+    position: relative;
+
+    @include mobile {
+        padding-top: 50px;
+    }
+
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: -1;
+    //     background: url(../images/success-bg.png) no-repeat top;
+    //     background-size: cover;
+    //     background-position: 0 -1950px;
+    //     mix-blend-mode: multiply;
+    //     filter: blur(5px);
+    // }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 500px;
+        height: 700px;
+        position: absolute;
+        left: 0%;
+        top: -20%;
+        z-index: -1;
+        background: url(../images/tree/reviews.png) no-repeat center;
+        background-size: cover;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
 
     &__wrapper {
         display: flex;
@@ -10,11 +49,27 @@
     &__content {
         max-width: 330px;
 
+        @include tablet {
+            margin-right: 10px;
+        }
+
+        @include mobile {
+            max-width: 50%;
+        }
+
         & p {
             font-feature-settings: 'liga' off;
             font-family: 'TTNorms';
             font-size: 18px;
             margin-bottom: 20px;
+
+            @include tablet {
+                font-size: 14px;
+            }
+
+            @include phone {
+                font-size: 10px;
+            }
 
             &:last-child {
                 margin: 0;
@@ -25,8 +80,16 @@
     & .section__title {
         margin-bottom: 52px;
 
+        @include phone {
+            margin-bottom: 40px;
+        }
+
         &::after {
             bottom: -22px;
+
+            @include phone {
+                bottom: -20px;
+            }
         }
     }
 
@@ -46,6 +109,28 @@
             filter: drop-shadow(0px 3px 3.112194299697876px rgba(0, 0, 0, 0.10)) drop-shadow(0px 7px 6.922032356262207px rgba(0, 0, 0, 0.12));
             transition: all .3s ease;
             cursor: pointer;
+
+            @include tablet {
+                width: 42px;
+                height: 34px;
+            }
+
+            @include phone {
+                width: 33px;
+                height: 27px;
+            }
+
+            & svg {
+                @include tablet {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                @include phone {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
 
             & svg path {
                 transition: all .3s ease;
@@ -87,6 +172,11 @@
     &__list {
         display: flex;
         width: 655px;
+
+        @include laptop {
+            max-width: 50%;
+            width: auto;
+        }
     }
 
     &__item {
@@ -98,12 +188,49 @@
         box-shadow: 0px 3px 3.11219px 0px rgba(0, 0, 0, 0.10), 0px 7px 6.92203px 0px rgba(0, 0, 0, 0.12);
         backdrop-filter: blur(25px);
 
+        @include laptop {
+            width: 200px;
+            opacity: .5;
+
+            &.slick-current {
+                opacity: 1;
+            }
+        }
+
+        @include tablet {
+            padding: 20px 15px;
+            margin-right: 20px;
+            min-height: 350px;
+        }
+
+        @include mobile {
+            width: 160px;
+            min-height: 370px;
+        }
+
+        @include phone {
+            width: 140px;
+            min-height: 300px;
+            padding: 12px 10px;
+            margin-right: 10px;
+        }
+
         & p {
             color: rgba(255, 255, 255, 0.60);
             font-feature-settings: 'liga' off;
             font-family: 'TTNorms';
             margin-top: 20px;
             opacity: .6;
+
+            @include tablet {
+                margin-top: 15px;
+                font-size: 14px;
+            }
+
+            @include phone {
+                margin-top: 12px;
+                font-size: 10px;
+            }
         }
     }
 
@@ -114,6 +241,15 @@
         & img {
             width: 70px;
             height: 70px;
+
+            @include tablet {
+                width: 45px;
+                height: auto;
+            }
+
+            @include phone {
+                width: 30px;
+            }
         }
     }
 
@@ -124,6 +260,10 @@
             font-family: 'TTNorms';
             font-size: 20px;
             font-weight: 700;
+
+            @include mobile {
+                font-size: 12px;
+            }
         }
 
         & span {
@@ -131,6 +271,10 @@
             font-family: 'TTNorms';
             font-size: 12px;
             opacity: .6;
+
+            @include mobile {
+                font-size: 8px;
+            }
         }
     }
 }

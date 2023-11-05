@@ -1,14 +1,79 @@
 .faq {
     padding-top: 130px;
+    position: relative;
+
+    @include mobile {
+        padding-top: 50px;
+    }
+
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: -1;
+    //     background: url(../images/reasons-bg.png) no-repeat top;
+    //     background-size: cover;
+    //     background-position: 0 -1730px;
+    //     mix-blend-mode: multiply;
+    //     filter: blur(5px);
+    // }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &--left {
+            position: absolute;
+            left: 0;
+            top: 10%;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &--right {
+            position: absolute;
+            right: 0;
+
+            @include mobile {
+
+                top: 100%;
+                
+                & img {
+                    width: 200px;
+                    height: 250px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 
     & .section__title {
         text-align: center;
         margin-bottom: 102px;
 
+        @include phone {
+            margin-bottom: 50px;
+        }
+
         &::after {
             left: 50%;
             bottom: -32px;
             translate: -50% 0;
+
+            @include phone {
+                bottom: -20px;
+            }
+
         }
     }
 
@@ -18,6 +83,12 @@
         -moz-columns: 2;
         counter-reset: item;
         column-gap: 35px;
+
+        @include laptop {
+            columns: 1;
+            -webkit-columns: 1;
+            -moz-columns: 1;
+        }
     }
 
     &__item {
@@ -41,6 +112,14 @@
         border-image: linear-gradient(to bottom, #444, $transparent) 1;
         filter: drop-shadow(0px 3px 3.112194299697876px rgba(0, 0, 0, 0.10)) drop-shadow(0px 7px 6.922032356262207px rgba(0, 0, 0, 0.12));
 
+        @include laptop {
+            margin-top: 15px;
+        }
+
+        @include mobile {
+            padding: 0 15px;
+        }
+
         &:first-child {
             margin-top: 0;
         }
@@ -49,6 +128,10 @@
 
             h5 {
                 max-width: 316px;
+
+                @include laptop {
+                    max-width: none;
+                }
             }
         }
 
@@ -64,6 +147,10 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @include mobile {
+                top: 14px;
+            }
         }
 
     }
@@ -78,7 +165,12 @@
         font-size: 14px;
         font-weight: 700;
         cursor: pointer;
-        margin-left: 40px;
+        margin: 0 20px 0 40px;
+
+        @include mobile {
+            height: 50px;
+            font-size: 12px;
+        }
 
         &:hover {
 
@@ -129,6 +221,15 @@
         font-family: 'TTNorms';
         font-size: 14px;
         position: relative;
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        @include phone {
+            font-size: 10px;
+            padding: 15px 0;
+        }
 
         &::before {
             content: '';

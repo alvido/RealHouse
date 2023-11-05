@@ -2,11 +2,16 @@
     padding-top: 130px;
     position: relative;
 
+    @include mobile {
+        padding-top: 50px;
+    }
+
     &::before {
         content: '';
         display: block;
         width: 100%;
-        height: 2800px;
+        height: 100%;
+        height: 2500px;
         position: absolute;
         left: 0;
         top: 0;
@@ -18,6 +23,23 @@
         filter: blur(5px);
     }
 
+    &::after {
+        content: '';
+        display: block;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        left: 0%;
+        top: 30%;
+        z-index: -1;
+        background: url(../images/tree/success.png) no-repeat center;
+        background-size: cover;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
     & .section__title {
         text-align: center;
         margin-bottom: 102px;
@@ -25,14 +47,19 @@
         &::after {
             bottom: -32px;
             left: 50%;
-            translate: 0 -50%;
+            translate: -50% 0;
         }
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        @include phone {
+            gap: 10px;
+        }
     }
 
     &__item {
@@ -43,6 +70,12 @@
         position: relative;
         transition: all 0.5s ease;
 
+        @include tablet {
+            max-width: 25%;
+            min-width: 140px;
+            min-height: 140px;
+        }
+
         &:hover {
             &::after {
                 background: rgba(9, 10, 18, 0.60);
@@ -50,7 +83,7 @@
             }
 
             & .success__desc {
-                padding: 40px 20px;
+                padding: 20px;
             }
 
             & .price {
@@ -62,6 +95,8 @@
                 opacity: 1;
                 height: auto;
                 overflow: visible;
+                margin-top: 10px;
+                font-size: 10px;
             }
 
             & h5,
@@ -89,6 +124,12 @@
             top: -46px;
             right: -49px;
             z-index: 1;
+
+            @include tablet {
+                width: 140px;
+                top: -36px;
+                right: -38px;
+            }
         }
     }
 
@@ -97,14 +138,15 @@
         height: 100%;
         object-fit: cover;
         transition: all 0.5s ease;
+        opacity: .7;
     }
 
     &__desc {
         position: absolute;
         left: 0;
-        right: 0;
         top: 0;
-        bottom: 0;
+        width: 100%;
+        height: 100%;
         padding: 27px 20px 16px 20px;
         display: flex;
         flex-direction: column;
@@ -112,14 +154,22 @@
         z-index: 1;
         transition: all .3s ease;
 
+        @include tablet {
+            padding: 13px 8px 10px;
+        }
+
         & .price {
-            margin-bottom: 20px;
+            margin-bottom: auto;
             width: 100%;
             color: #FFF;
             font-size: 24px;
             font-weight: 700;
             text-transform: capitalize;
             transition: all .3s ease;
+
+            @include tablet {
+                font-size: 14px;
+            }
         }
 
         & h5 {
@@ -127,6 +177,12 @@
             color: #FFF;
             font-family: 'TTNorms';
             font-weight: 700;
+
+            @include tablet {
+                margin-top: 20px;
+                font-size: 10px;
+                max-width: 75px;
+            }
         }
 
         & p {
@@ -135,6 +191,10 @@
             font-feature-settings: 'liga' off;
             font-family: 'TTNorms';
             font-size: 14px;
+
+            @include tablet {
+                font-size: 8px;
+            }
         }
     }
 
@@ -158,6 +218,10 @@
 
         & img {
             margin-bottom: 11px;
+
+            @include tablet {
+                width: 30px;
+            }
         }
 
         &:hover {

@@ -166,8 +166,12 @@ body {
     font-size: 40px;
     position: relative;
 
+    @include tablet {
+        font-size: 6vw;
+    }
+
     @include phone {
-        font-size: 20px;
+        font-size: 20px!important;
     }
 
     &::after {
@@ -186,15 +190,4 @@ body {
     & span {
         color: $yellow;
     }
-}
-
-
-.purpose,
-.success,
-.process,
-.reviews,
-.reasons,
-.faq,
-.footer {
-    display: none;
 }

@@ -141,19 +141,13 @@ $(document).ready(function () {
 
       responsive: [
         {
-          breakpoint: 700,
+          breakpoint: 1001,
           settings: {
-            arrows: false,
-            slidesToShow: 2,
-            variableWidth: false,
           },
         },
         {
           breakpoint: 560,
           settings: {
-            arrows: false,
-            slidesToShow: 1,
-            variableWidth: false,
           },
         },
       ],
