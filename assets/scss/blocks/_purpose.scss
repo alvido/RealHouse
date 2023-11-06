@@ -40,6 +40,10 @@
             bottom: 280%;
             top: auto;
         }
+
+        @include phone {
+            bottom: 200%;
+        }
     }
 
     & .section__title {

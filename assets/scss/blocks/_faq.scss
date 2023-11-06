@@ -33,7 +33,7 @@
         &--left {
             position: absolute;
             left: 0;
-            top: 10%;
+            bottom: 10%;
 
             @include mobile {
                 display: none;

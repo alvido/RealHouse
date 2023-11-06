@@ -24,9 +24,9 @@ body {
     padding: 0 20px;
     margin: 0 auto;
 
-    @include mobile {
-        padding: 0 35px;
-    }
+    // @include phone {
+    //     padding: 0 35px;
+    // }
 }
 
 .navigation {

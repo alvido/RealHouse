@@ -114,11 +114,6 @@ body.lock {
   padding: 0 20px;
   margin: 0 auto;
 }
-@media (max-width: 560px) {
-  .container {
-    padding: 0 35px;
-  }
-}
 
 .navigation {
   margin-left: 54px;
@@ -1132,7 +1127,7 @@ body.lock {
 .faq__bg--left {
   position: absolute;
   left: 0;
-  top: 10%;
+  bottom: 10%;
 }
 @media (max-width: 560px) {
   .faq__bg--left {
@@ -1547,6 +1542,11 @@ body.lock {
     height: 500px;
     bottom: 280%;
     top: auto;
+  }
+}
+@media (max-width: 430px) {
+  .purpose::after {
+    bottom: 200%;
   }
 }
 .purpose .section__title {
