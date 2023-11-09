@@ -47,7 +47,7 @@
         transition: all .3s ease;
 
         @include phone {
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
 
         &:hover {
@@ -115,16 +115,18 @@
     &__list--item {
         display: flex;
         align-items: center;
-    }
 
-    &__list--link {
-        display: flex;
-        align-items: center;
-        transition: all .3s ease;
-        position: relative;
-        font-size: 14px;
-        letter-spacing: -0.49px;
+        & .navigation__link {
 
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            @include phone {
+                font-size: 12px;
+            }
+        }
     }
 
     &__contact {
@@ -133,6 +135,7 @@
         @include ipad {
             position: absolute;
             right: 20px;
+            top: 55px;
         }
     }
 
@@ -158,7 +161,6 @@
         & svg {
             @include phone {
                 width: 12px;
-                margin-right: 5px;
             }
         }
     }

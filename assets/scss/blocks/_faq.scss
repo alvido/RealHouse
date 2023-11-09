@@ -47,7 +47,7 @@
             @include mobile {
 
                 top: 100%;
-                
+
                 & img {
                     width: 200px;
                     height: 250px;
@@ -60,6 +60,10 @@
     & .section__title {
         text-align: center;
         margin-bottom: 102px;
+
+        @include mobile {
+            margin-bottom: 70px;
+        }
 
         @include phone {
             margin-bottom: 50px;
@@ -153,6 +157,22 @@
             }
         }
 
+        &.active {
+
+            & .faq__btn {
+
+                &::before,
+                &::after {
+                    background: $red;
+                    box-shadow: 0px 2px 4px 0px #000;
+                }
+
+                &::after {
+                    rotate: 0deg;
+                }
+            }
+        }
+
     }
 
     &__title {
@@ -172,22 +192,24 @@
             font-size: 12px;
         }
 
-        &:hover {
+    }
 
-            &::before,
-            &::after {
-                background: $red;
-                box-shadow: 0px 2px 4px 0px #000;
-            }
-        }
+    &__btn {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 22px;
+        right: 10px;
+        background: transparent;
+        cursor: pointer;
 
         &::before,
         &::after {
             content: '';
             position: absolute;
-            // top: 26px;
-            right: 10px;
-            translate: -50% 0;
+            left: 0;
+            top: 50%;
+            translate: 0 -50%;
             width: 14px;
             height: 2px;
             background: $white;
@@ -199,36 +221,30 @@
             rotate: 90deg;
         }
 
-        &.active {
+        &:hover {
 
             &::before,
             &::after {
                 background: $red;
                 box-shadow: 0px 2px 4px 0px #000;
             }
-
-            &::after {
-                rotate: 0deg;
-            }
         }
     }
 
     &__text {
-        display: none;
-        padding: 20px 0;
+        padding: 0px 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
         color: rgba(255, 255, 255, 0.60);
         font-feature-settings: 'liga' off;
         font-family: 'TTNorms';
         font-size: 14px;
         position: relative;
+        transition: all .3s ease;
 
         @include mobile {
             font-size: 12px;
-        }
-
-        @include phone {
-            font-size: 10px;
-            padding: 15px 0;
         }
 
         &::before {
@@ -240,6 +256,17 @@
             height: 1px;
             background: $white;
             opacity: .1;
+        }
+
+        &.open {
+            visibility: visible;
+            opacity: 1;
+            padding: 20px 0;
+            height: auto;
+
+            @include mobile {
+                padding: 15px 0;
+            }
         }
     }
 }

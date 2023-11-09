@@ -1,20 +1,11 @@
-<svg width="265" height="264" viewBox="0 0 265 264" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_116_337)">
-<path d="M132.499 135.206H124.06C122.403 135.206 121.06 133.863 121.06 132.206V120C121.06 118.343 122.403 117 124.06 117H140.832C142.489 117 143.832 118.343 143.832 120V132.206C143.832 133.863 142.489 135.206 140.832 135.206H138.591" stroke="#201E28" stroke-width="2"/>
-<path d="M132.299 133.215V137.089C132.299 138.386 133.745 139.159 134.823 138.439V138.439C135.369 138.075 136.079 138.075 136.625 138.439V138.439C137.703 139.159 139.149 138.386 139.149 137.089V133.215" stroke="#201E28" stroke-width="2"/>
-<path d="M125.567 121.625H139.324" stroke="#201E28" stroke-width="2" stroke-linecap="round"/>
-<path d="M125.567 126.074H129.021" stroke="#201E28" stroke-width="2" stroke-linecap="round"/>
-<path d="M135.812 135.328C138.087 135.328 139.915 133.469 139.915 131.196C139.915 128.923 138.087 127.064 135.812 127.064C133.537 127.064 131.709 128.923 131.709 131.196C131.709 133.469 133.537 135.328 135.812 135.328Z" stroke="#201E28" stroke-width="2"/>
+<svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="certificat">
+<g id="Group 258">
+<path id="Rectangle 28" d="M13.4989 21.2061H5.05957C3.40272 21.2061 2.05957 19.863 2.05957 18.2061V6C2.05957 4.34314 3.40272 3 5.05957 3H21.8318C23.4887 3 24.8318 4.34315 24.8318 6V18.2061C24.8318 19.863 23.4887 21.2061 21.8318 21.2061H19.591" stroke="#201E28" stroke-width="2"/>
+<path id="Rectangle 29" d="M13.2995 19.2155V23.0892C13.2995 24.3858 14.7448 25.159 15.8233 24.4394V24.4394C16.3687 24.0755 17.0795 24.0755 17.6249 24.4394V24.4394C18.7035 25.159 20.1487 24.3858 20.1487 23.0892V19.2155" stroke="#201E28" stroke-width="2"/>
+<path id="Line 4" d="M6.56721 7.62476H20.3242" stroke="#201E28" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 5" d="M6.56721 12.074H10.0211" stroke="#201E28" stroke-width="2" stroke-linecap="round"/>
+<path id="Ellipse 17" d="M16.8119 21.328C19.0865 21.328 20.9145 19.4692 20.9145 17.1961C20.9145 14.923 19.0865 13.0642 16.8119 13.0642C14.5372 13.0642 12.7092 14.923 12.7092 17.1961C12.7092 19.4692 14.5372 21.328 16.8119 21.328Z" stroke="#201E28" stroke-width="2"/>
 </g>
-<defs>
-<filter id="filter0_d_116_337" x="-0.94043" y="-2" width="267" height="267" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="60"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.972549 0 0 0 0 0.8 0 0 0 0 0.345098 0 0 0 0.5 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_116_337"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_116_337" result="shape"/>
-</filter>
-</defs>
+</g>
 </svg>

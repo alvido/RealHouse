@@ -67,6 +67,7 @@
 
         @include mobile {
             grid-gap: 30px 10px;
+            margin-top: 70px;
         }
 
         @include phone {
@@ -139,7 +140,7 @@
             }
 
             @include phone {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     }

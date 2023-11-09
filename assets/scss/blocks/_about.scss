@@ -53,10 +53,13 @@
             gap: 40px;
         }
 
-        @include mobile {
+        & img {
 
-            & img {
-                width: 100%;
+            max-width: 445px;
+
+            @include mobile {
+                max-width: 290px;
+                height: 415px;
             }
         }
     }

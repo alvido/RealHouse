@@ -59,6 +59,10 @@
         text-align: center;
         margin-bottom: 102px;
 
+        @include mobile {
+            margin-bottom: 60px;
+        }
+
         @include phone {
             margin-bottom: 40px;
         }
@@ -168,7 +172,7 @@
             }
 
             @include phone {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     }

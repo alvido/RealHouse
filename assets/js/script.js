@@ -26,16 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //faq collapse
 $(document).ready(function () {
-  $('.faq__title').on('click', faqCollapse);
+  $('.faq__title, .faq__btn').on('click', function() {
+    faqCollapse($(this));
+  });
 });
 
-function faqCollapse() {
-  var $this = $(this);
-  $this.toggleClass("active");
-  // $('.faq__title').not($this).removeClass("active");
-  var $faqText = $this.next('.faq__text');
-  // $('.faq__text').not($faqText).slideUp(500);
-  $faqText.slideToggle(500);
+function faqCollapse($element) {
+  $element.parent().toggleClass("active");
+  // Находим родителя и добавляем ему класс
+  $element.parent().find('.faq__text').toggleClass("open");
 }
 //faq collapse
 
@@ -122,7 +121,7 @@ $(document).ready(function () {
       prevArrow: `<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
       <path d="M19.0596 12L5.05957 12" stroke="#0F0E13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M12.0596 5L5.05957 12L12.0596 19" stroke="#0F0E13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg></button>`,
+      </svg></button>`,
       nextArrow: `<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
       <path d="M5.05957 12L19.0596 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M12.0596 5L19.0596 12L12.0596 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -44,6 +44,10 @@
         text-align: center;
         margin-bottom: 102px;
 
+        @include mobile {
+            margin-bottom: 70px;
+        }
+
         &::after {
             bottom: -32px;
             left: 50%;
@@ -52,10 +56,16 @@
     }
 
     &__list {
+        padding: 4px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
+        gap: 25px;
+        overflow: hidden;
+
+        @include tablet {
+            gap: 20px;
+        }
 
         @include phone {
             gap: 10px;
@@ -64,16 +74,16 @@
 
     &__item {
         position: relative;
+        width: 30%;
         max-width: 255px;
-        min-height: 255px;
+        min-width: 140px;
+        min-height: 140px;
 
         position: relative;
         transition: all 0.5s ease;
 
-        @include tablet {
-            max-width: 25%;
-            min-width: 140px;
-            min-height: 140px;
+        @include mobile {
+            width: 45%;
         }
 
         &:hover {
@@ -83,11 +93,27 @@
             }
 
             & .success__desc {
-                padding: 20px;
+                padding: 25px;
+
+                @include tablet {
+                    padding: 20px 15px;
+                }
+
+                @include mobile {
+                    padding: 30px 15px;
+                }
+
+                @include phone {
+                    padding: 15px;
+                }
             }
 
             & .price {
                 text-align: center;
+
+                @include tablet {
+                    margin-bottom: 0px;
+                }
             }
 
             & .more {
@@ -95,8 +121,7 @@
                 opacity: 1;
                 height: auto;
                 overflow: visible;
-                margin-top: 10px;
-                font-size: 10px;
+                margin-top: 20px;
             }
 
             & h5,
@@ -125,7 +150,7 @@
             right: -49px;
             z-index: 1;
 
-            @include tablet {
+            @include mobile {
                 width: 140px;
                 top: -36px;
                 right: -38px;
@@ -168,20 +193,30 @@
             transition: all .3s ease;
 
             @include tablet {
-                font-size: 14px;
+                font-size: 3vw;
+            }
+
+            @include mobile {
+                font-size: 4vw;
             }
         }
 
         & h5 {
-            margin-top: 80px;
             color: #FFF;
             font-family: 'TTNorms';
             font-weight: 700;
 
+            @include laptop {
+                width: 75%;
+                min-width: 75px;
+            }
+
             @include tablet {
-                margin-top: 20px;
-                font-size: 10px;
-                max-width: 75px;
+                font-size: 2.4vw;
+            }
+
+            @include mobile {
+                font-size: 3.5vw;
             }
         }
 
@@ -193,7 +228,11 @@
             font-size: 14px;
 
             @include tablet {
-                font-size: 8px;
+                font-size: 1.8vw;
+            }
+
+            @include mobile {
+                font-size: 2.8vw;
             }
         }
     }
@@ -216,10 +255,23 @@
         cursor: pointer;
         transition: all .3s ease;
 
+        @include tablet {
+            font-size: 12px;
+        }
+
+        @include phone {
+            margin-top: 10px;
+            font-size: 10px;
+        }
+
         & img {
             margin-bottom: 11px;
 
             @include tablet {
+                width: 40px;
+            }
+
+            @include mobile {
                 width: 30px;
             }
         }
