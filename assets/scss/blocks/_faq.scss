@@ -81,18 +81,24 @@
         }
     }
 
-    &__list {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        counter-reset: item;
-        column-gap: 35px;
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 0 30px;
 
         @include laptop {
-            columns: 1;
-            -webkit-columns: 1;
-            -moz-columns: 1;
+            flex-direction: column;
+            gap: 15px 0;
         }
+    }
+
+    &__list {
+
+        &#faq__list2 {
+            counter-reset: item 4;
+        }
+
+        @include laptop {}
     }
 
     &__item {
@@ -102,10 +108,7 @@
         margin-top: 25px;
         position: relative;
 
-        break-inside: avoid;
-        page-break-inside: avoid;
-        -webkit-column-break-inside: avoid;
-        break-inside: avoid-column;
+        counter-increment: item;
 
         background: linear-gradient(260deg, rgba(255, 255, 255, 0.10) -12.6%, rgba(255, 255, 255, 0.00) 78.85%),
             rgba(32, 30, 40, 0.60);
@@ -126,9 +129,6 @@
 
         &:first-child {
             margin-top: 0;
-        }
-
-        &:nth-of-type(5) {
 
             h5 {
                 max-width: 316px;
@@ -140,10 +140,10 @@
         }
 
         &::before {
+
             position: absolute;
             top: 16px;
             left: 20px;
-            counter-increment: item;
             content: counter(item, decimal-leading-zero);
             font-size: 20px;
             text-transform: uppercase;
@@ -198,10 +198,14 @@
         width: 14px;
         height: 14px;
         position: absolute;
-        top: 22px;
+        top: 24px;
         right: 10px;
         background: transparent;
         cursor: pointer;
+
+        @include mobile {
+            top: 19px;
+        }
 
         &::before,
         &::after {

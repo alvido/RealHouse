@@ -236,55 +236,47 @@ body.lock {
 
 .call {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  padding-left: 30px;
+  line-height: 1;
   color: #FFF;
   font-size: 20px;
   font-weight: 700;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-@media (max-width: 1150px) {
-  .call {
-    font-size: 18px;
-  }
+.call::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url(/assets/images/icon/phone.svg) no-repeat center;
 }
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .call {
     font-size: 16px;
+  }
+  .call::before {
+    height: 14px;
+    width: 14px;
+    background-size: contain;
   }
 }
 @media (max-width: 430px) {
   .call {
     font-size: 12px;
+    padding-left: 20px;
+  }
+  .call::before {
+    height: 10px;
+    width: 10px;
   }
 }
 .call:hover {
   color: #F8CC58;
   -webkit-filter: drop-shadow(0px 4px 50px #F8CC58);
           filter: drop-shadow(0px 4px 50px #F8CC58);
-}
-.call svg {
-  height: 16px;
-  fill: #F8CC58;
-  margin-right: 10px;
-  -webkit-filter: drop-shadow(0px 4px 50px #F8CC58);
-          filter: drop-shadow(0px 4px 50px #F8CC58);
-}
-@media (max-width: 560px) {
-  .call svg {
-    height: 14px;
-  }
-}
-@media (max-width: 430px) {
-  .call svg {
-    height: 10px;
-    margin-right: 5px;
-  }
 }
 
 .section__title {
@@ -807,26 +799,27 @@ body.lock {
   }
 }
 .footer .mail {
-  margin: 24px 0 0 0;
+  margin-top: 24px;
   font-size: 14px;
+  position: relative;
+}
+.footer .mail::before {
+  height: 12px;
+  background: url(/assets/images/icon/email.svg) no-repeat center;
+  background-size: contain;
+}
+@media (max-width: 560px) {
+  .footer .mail {
+    margin-left: 0;
+  }
 }
 @media (max-width: 430px) {
   .footer .mail {
     margin-top: 10px;
+    font-size: 12px;
   }
-}
-@media (max-width: 560px) {
-  .footer .call {
-    font-size: 14px;
-  }
-}
-@media (max-width: 430px) {
-  .footer .call {
-    font-size: 10px;
-  }
-}
-@media (max-width: 430px) {
-  .footer .call svg {
+  .footer .mail::before {
+    height: 10px;
     width: 12px;
   }
 }
@@ -1193,21 +1186,26 @@ body.lock {
     bottom: -20px;
   }
 }
-.faq__list {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  counter-reset: item;
-  -webkit-column-gap: 35px;
-     -moz-column-gap: 35px;
-          column-gap: 35px;
+.faq__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 30px;
 }
 @media (max-width: 1000px) {
-  .faq__list {
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
+  .faq__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px 0;
   }
+}
+.faq__list#faq__list2 {
+  counter-reset: item 4;
 }
 .faq__item {
   display: -webkit-box;
@@ -1220,11 +1218,7 @@ body.lock {
   padding: 0 20px;
   margin-top: 25px;
   position: relative;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  break-inside: avoid-column;
+  counter-increment: item;
   background: linear-gradient(260deg, rgba(255, 255, 255, 0.1) -12.6%, rgba(255, 255, 255, 0) 78.85%), rgba(32, 30, 40, 0.6);
   border: 1px solid #FFF;
   border-bottom: none;
@@ -1249,11 +1243,11 @@ body.lock {
 .faq__item:first-child {
   margin-top: 0;
 }
-.faq__item:nth-of-type(5) h5 {
+.faq__item:first-child h5 {
   max-width: 316px;
 }
 @media (max-width: 1000px) {
-  .faq__item:nth-of-type(5) h5 {
+  .faq__item:first-child h5 {
     max-width: none;
   }
 }
@@ -1261,7 +1255,6 @@ body.lock {
   position: absolute;
   top: 16px;
   left: 20px;
-  counter-increment: item;
   content: counter(item, decimal-leading-zero);
   font-size: 20px;
   text-transform: uppercase;
@@ -1310,10 +1303,15 @@ body.lock {
   width: 14px;
   height: 14px;
   position: absolute;
-  top: 22px;
+  top: 24px;
   right: 10px;
   background: transparent;
   cursor: pointer;
+}
+@media (max-width: 560px) {
+  .faq__btn {
+    top: 19px;
+  }
 }
 .faq__btn::before, .faq__btn::after {
   content: "";
