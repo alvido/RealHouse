@@ -93,12 +93,15 @@
     }
 
     &__list {
+        width: 50%;
 
         &#faq__list2 {
             counter-reset: item 4;
         }
 
-        @include laptop {}
+        @include laptop {
+            width: 100%;
+        }
     }
 
     &__item {

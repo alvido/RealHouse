@@ -1204,8 +1204,16 @@ body.lock {
     gap: 15px 0;
   }
 }
+.faq__list {
+  width: 50%;
+}
 .faq__list#faq__list2 {
   counter-reset: item 4;
+}
+@media (max-width: 1000px) {
+  .faq__list {
+    width: 100%;
+  }
 }
 .faq__item {
   display: -webkit-box;
