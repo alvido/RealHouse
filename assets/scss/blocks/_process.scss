@@ -87,6 +87,24 @@
         position: relative;
         padding: 0 20px;
 
+        @include laptop {
+            &:last-child {
+                order: 3;
+            }
+
+            &:nth-child(3) {
+                order: 4;
+            }
+
+            &:nth-child(4) {
+                order: 6;
+            }
+
+            &:nth-child(5) {
+                order: 5;
+            }
+        }
+
         @include mobile {
             padding: 0;
         }
@@ -110,6 +128,14 @@
 
         &:last-child::after {
             display: none;
+
+            @include laptop {
+                display: block;
+                top: calc(100% + 15px);
+                right: 50%;
+                translate: 50% 0;
+                rotate: 90deg;
+            }
         }
 
         &:nth-child(3):after {
@@ -117,6 +143,19 @@
             right: 50%;
             translate: 50% 0;
             rotate: 90deg;
+
+            @include laptop {
+                top: 40px;
+                right: auto;
+                left: -25px;
+                rotate: 180deg;
+                translate: 0;
+            }
+
+            @include phone {
+                right: 100%;
+                left: auto;
+            }
         }
 
         &:nth-child(4):after,
@@ -133,8 +172,7 @@
             }
 
             &:nth-child(4)::after {
-                right: auto;
-                left: -25px;
+                display: none;
             }
 
             &:nth-child(5)::after {
@@ -144,8 +182,7 @@
 
         @include tablet {
 
-            &:nth-child(2)::after,
-            &:nth-child(3)::after {
+            &:nth-child(2)::after {
                 top: calc(100% + 15px);
             }
 
@@ -190,7 +227,6 @@
             font-family: 'TTNorms';
             font-size: 20px;
             font-weight: 700;
-            text-transform: capitalize;
 
             @include tablet {
                 font-size: 16px;

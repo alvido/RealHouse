@@ -624,6 +624,7 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   background: transparent;
+  display: none;
 }
 @media (max-width: 1000px) {
   .hero__scroll {
@@ -1636,7 +1637,6 @@ body.lock {
   background: url(../images/texturefabrik.png) no-repeat center;
   border-radius: 10px;
   border: 1px solid #444;
-  border-bottom: 1px solid transparent;
   background-size: cover;
   position: absolute;
   left: 0;
@@ -1709,6 +1709,7 @@ body.lock {
 .success {
   padding-top: 130px;
   position: relative;
+  display: none;
 }
 @media (max-width: 560px) {
   .success {
@@ -2103,6 +2104,28 @@ body.lock {
   position: relative;
   padding: 0 20px;
 }
+@media (max-width: 1000px) {
+  .process__item:last-child {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .process__item:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .process__item:nth-child(4) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .process__item:nth-child(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
 @media (max-width: 560px) {
   .process__item {
     padding: 0;
@@ -2128,11 +2151,35 @@ body.lock {
 .process__item:last-child::after {
   display: none;
 }
+@media (max-width: 1000px) {
+  .process__item:last-child::after {
+    display: block;
+    top: calc(100% + 15px);
+    right: 50%;
+    translate: 50% 0;
+    rotate: 90deg;
+  }
+}
 .process__item:nth-child(3):after {
   top: calc(100% + 45px);
   right: 50%;
   translate: 50% 0;
   rotate: 90deg;
+}
+@media (max-width: 1000px) {
+  .process__item:nth-child(3):after {
+    top: 40px;
+    right: auto;
+    left: -25px;
+    rotate: 180deg;
+    translate: 0;
+  }
+}
+@media (max-width: 430px) {
+  .process__item:nth-child(3):after {
+    right: 100%;
+    left: auto;
+  }
 }
 .process__item:nth-child(4):after, .process__item:nth-child(5):after {
   rotate: 180deg;
@@ -2145,15 +2192,14 @@ body.lock {
     rotate: 90deg;
   }
   .process__item:nth-child(4)::after {
-    right: auto;
-    left: -25px;
+    display: none;
   }
   .process__item:nth-child(5)::after {
     rotate: 0deg;
   }
 }
 @media (max-width: 768px) {
-  .process__item:nth-child(2)::after, .process__item:nth-child(3)::after {
+  .process__item:nth-child(2)::after {
     top: calc(100% + 15px);
   }
   .process__item:nth-child(1)::after, .process__item:nth-child(5)::after {
@@ -2191,7 +2237,6 @@ body.lock {
   font-family: "TTNorms";
   font-size: 20px;
   font-weight: 700;
-  text-transform: capitalize;
 }
 @media (max-width: 768px) {
   .process__item p {
@@ -2329,7 +2374,6 @@ body.lock {
   border-radius: 6px;
   background: linear-gradient(224deg, rgba(255, 255, 255, 0.1) -71.23%, rgba(255, 255, 255, 0) 94.99%), #201E28;
   border: 1px solid #444;
-  border-bottom: 1px solid transparent;
   -webkit-filter: drop-shadow(0px 3px 3.1121942997px rgba(0, 0, 0, 0.1)) drop-shadow(0px 7px 6.9220323563px rgba(0, 0, 0, 0.12));
           filter: drop-shadow(0px 3px 3.1121942997px rgba(0, 0, 0, 0.1)) drop-shadow(0px 7px 6.9220323563px rgba(0, 0, 0, 0.12));
   -webkit-transition: all 0.3s ease;
@@ -2443,7 +2487,7 @@ body.lock {
 @media (max-width: 430px) {
   .reviews__item {
     width: 140px;
-    min-height: 300px;
+    min-height: 350px;
     padding: 12px 10px;
     margin-right: 10px;
   }

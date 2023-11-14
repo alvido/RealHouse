@@ -112,7 +112,6 @@
             border-radius: 6px;
             background: linear-gradient(224deg, rgba(255, 255, 255, 0.10) -71.23%, rgba(255, 255, 255, 0.00) 94.99%), #201E28;
             border: 1px solid #444;
-            border-bottom: 1px solid transparent;
             filter: drop-shadow(0px 3px 3.112194299697876px rgba(0, 0, 0, 0.10)) drop-shadow(0px 7px 6.922032356262207px rgba(0, 0, 0, 0.12));
             transition: all .3s ease;
             cursor: pointer;
@@ -224,7 +223,7 @@
 
         @include phone {
             width: 140px;
-            min-height: 300px;
+            min-height: 350px;
             padding: 12px 10px;
             margin-right: 10px;
         }

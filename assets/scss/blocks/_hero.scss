@@ -175,6 +175,7 @@
         align-items: center;
         justify-content: center;
         background: $transparent;
+        display: none;
 
         @include laptop {
             position: absolute;

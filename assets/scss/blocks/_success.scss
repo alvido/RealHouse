@@ -1,6 +1,7 @@
 .success {
     padding-top: 130px;
     position: relative;
+    display: none;
 
     @include mobile {
         padding-top: 50px;
