@@ -143,7 +143,7 @@
 
         & h4 {
             margin: 23px 0 15px;
-            color: $red;
+            color: $white;
             font-size: 30px;
             text-transform: capitalize;
 
@@ -158,6 +158,7 @@
 
             @include phone {
                 font-size: 14px;
+                margin: 5px 0 10px;
             }
         }
 

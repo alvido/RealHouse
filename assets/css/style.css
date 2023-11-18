@@ -2728,7 +2728,7 @@ body.lock {
 }
 .reasons__item h4 {
   margin: 23px 0 15px;
-  color: #F66350;
+  color: #FFF;
   font-size: 30px;
   text-transform: capitalize;
 }
@@ -2746,6 +2746,7 @@ body.lock {
 @media (max-width: 430px) {
   .reasons__item h4 {
     font-size: 14px;
+    margin: 5px 0 10px;
   }
 }
 .reasons__item p {
